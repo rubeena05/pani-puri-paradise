@@ -1,0 +1,17 @@
+{
+  "name": "pani-puri-paradise",
+  "version": "1.0.0",
+  "description": "Modern, vibrant responsive website for Pani Puri Paradise - Indian Street Food",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000 -o"
+  },
+  "keywords": [
+    "panipuri",
+    "street-food",
+    "restaurant",
+    "firebase"
+  ],
+  "author": "Pani Puri Paradise team",
+  "license": "ISC"
+}
