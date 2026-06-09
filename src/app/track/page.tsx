@@ -1,17 +1,24 @@
 "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React, { useState, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useDatabase } from "@/context/DatabaseContext";
 import { Search, Compass, AlertCircle, ArrowRight } from "lucide-react";
+import TrackClientPage from "./TrackClientPage";
 
-export default function TrackSearchPage() {
+function TrackSearchPageContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const orderId = searchParams.get("id");
   const { orders } = useDatabase();
   const [query, setQuery] = useState("");
   const [error, setError] = useState("");
+
+  if (orderId) {
+    return <TrackClientPage id={orderId} />;
+  }
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,7 +37,7 @@ export default function TrackSearchPage() {
     );
 
     if (foundOrder) {
-      router.push(`/track/${foundOrder.id}`);
+      router.push(`/track?id=${foundOrder.id}`);
     } else {
       setError("Order not found. Please double-check your receipt or token number.");
     }
@@ -98,7 +105,7 @@ export default function TrackSearchPage() {
               {recentActiveOrders.map((order) => (
                 <button
                   key={order.id}
-                  onClick={() => router.push(`/track/${order.id}`)}
+                  onClick={() => router.push(`/track?id=${order.id}`)}
                   className="w-full flex items-center justify-between p-3 rounded-xl bg-slate-900/40 border border-white/5 hover:border-white/10 hover:bg-slate-900/70 transition-all text-left group"
                 >
                   <div className="flex items-center space-x-3">
@@ -122,5 +129,17 @@ export default function TrackSearchPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function TrackSearchPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex flex-col min-h-screen bg-slate-950 text-white items-center justify-center">
+        <div className="animate-pulse">Loading Tracker...</div>
+      </div>
+    }>
+      <TrackSearchPageContent />
+    </Suspense>
   );
 }
