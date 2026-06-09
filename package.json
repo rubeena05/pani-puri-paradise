@@ -1,31 +1,17 @@
 {
   "name": "pani-puri-paradise",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Modern, vibrant responsive website for Pani Puri Paradise - Indian Street Food",
+  "main": "index.html",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "npx -y http-server -p 3000 -o"
   },
-  "dependencies": {
-    "firebase": "^12.14.0",
-    "framer-motion": "^12.40.0",
-    "lucide-react": "^1.17.0",
-    "next": "16.2.7",
-    "qrcode.react": "^4.2.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "recharts": "^3.8.1"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.7",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+  "keywords": [
+    "panipuri",
+    "street-food",
+    "restaurant",
+    "firebase"
+  ],
+  "author": "Pani Puri Paradise team",
+  "license": "ISC"
 }

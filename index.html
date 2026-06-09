@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pani Puri Paradise - Experience India's Favorite Street Food</title>
+  <meta name="description" content="Welcome to Pani Puri Paradise. Experience the crispiness of fresh puris, the tang of mint water, and the sweetness of tamarind chutney. Order online now!">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- --- TOAST NOTIFICATIONS --- -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- --- HEADER / NAVIGATION --- -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#home" class="logo-container">
+        <img src="assets/images/logo.png" alt="Pani Puri Paradise Logo" class="logo-img">
+        <span class="logo-text">Pani Puri Paradise</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#live-tracker">Live Orders</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#admin" id="admin-nav-link" class="admin-link-btn">Admin</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" title="Toggle Theme" aria-label="Toggle Dark Mode">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light" style="display:none;"></i>
+        </button>
+
+        <!-- Cart Toggle -->
+        <button id="cart-toggle" class="cart-toggle" title="Open Shopping Cart" aria-label="Open Cart">
+          <i data-lucide="shopping-cart"></i>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" title="Toggle Menu" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- --- HERO SECTION --- -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Welcome to <br><span>Pani Puri Paradise</span></h1>
+          <p>Experience the Taste of India's Favorite Street Food. Crispy, golden-hued puris loaded with mouth-watering fillings and filled to the brim with chilled, tangy mint water.</p>
+          <div class="hero-ctas">
+            <a href="#menu" class="btn btn-primary">Order Now <i data-lucide="arrow-right"></i></a>
+            <a href="#menu" class="btn btn-secondary">View Menu</a>
+          </div>
+        </div>
+        <div class="hero-image-container">
+          <div class="puri-decor-circle"></div>
+          <div class="hero-img-card">
+            <img src="assets/images/hero-bg.png" alt="Delicious Panipuri Platter">
+          </div>
+          <!-- Floating animated elements -->
+          <div class="floating-puri puri-1"></div>
+          <div class="floating-puri puri-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- ABOUT US --- -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=400" alt="Making Pani Puri">
+          </div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=400" alt="Fresh Mint Water">
+          </div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=400" alt="Crispy Puris">
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+            <h2>Our Story</h2>
+          </div>
+          <h3>Bringing the Authentic Taste of Indian Streets to You</h3>
+          <p>At Pani Puri Paradise, we are passionate about crafting the perfect street food experience. Every single puri is made with high-quality grains, rolled out, and fried to crispy golden perfection. Our signature spiced water blends fresh mint leaves, tangy coriander, tamarind juice, and dry-roasted spices to create a refreshing punch of flavor that dances on your taste buds.</p>
+          <p>We combine traditional recipes with modern hygiene standards. Cleanliness is our highest priority—meaning pure mineral water, premium grade ingredients, and gloves-only preparation, ensuring that you can indulge in your street-food cravings stress-free.</p>
+          
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-icon-wrapper"><i data-lucide="shield-check"></i></div>
+              <div>
+                <h4>100% Hygienic</h4>
+                <p>Prepared using mineral water & organic materials.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon-wrapper"><i data-lucide="flame"></i></div>
+              <div>
+                <h4>Authentic Spices</h4>
+                <p>Crafted using hand-ground traditional masalas.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon-wrapper"><i data-lucide="thumbs-up"></i></div>
+              <div>
+                <h4>Daily Fresh</h4>
+                <p>Puris fried fresh daily for maximum crispiness.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon-wrapper"><i data-lucide="truck"></i></div>
+              <div>
+                <h4>Quick Delivery</h4>
+                <p>Packed securely to preserve temperature & crispiness.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- MENU SECTION --- -->
+  <section id="menu" class="menu section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Taste The Paradise Menu</h2>
+        <p>Choose from our classic recipes or experience our modern cheesy and sweet infusions.</p>
+      </div>
+
+      <div class="menu-controls">
+        <div class="menu-search">
+          <i data-lucide="search"></i>
+          <input type="text" id="menu-search-input" placeholder="Search delicious street foods...">
+        </div>
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">All Items</button>
+          <button class="filter-btn" data-filter="panipuri">Panipuri Specials</button>
+          <button class="filter-btn" data-filter="chaats">Chaats</button>
+          <button class="filter-btn" data-filter="combos">Combos</button>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Classic Panipuri -->
+        <div class="menu-card" data-id="classic-panipuri">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=400" alt="Classic Panipuri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 4.9
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Classic Panipuri</h3>
+            <p class="menu-card-desc">6 crispy puris filled with spiced boiled potatoes, chickpeas, fresh mint-coriander water, and sweet tamarind chutney.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹99</span>
+              <button class="add-to-cart-btn add-btn" data-id="classic-panipuri" aria-label="Add Classic Panipuri to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Masala Panipuri -->
+        <div class="menu-card" data-id="masala-panipuri">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=400" alt="Masala Panipuri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 4.7
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Masala Panipuri</h3>
+            <p class="menu-card-desc">Puris stuffed with hot, flavorful white pea ragda, fresh onions, coriander, and secret spice powders.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹119</span>
+              <button class="add-to-cart-btn add-btn" data-id="masala-panipuri" aria-label="Add Masala Panipuri to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cheese Panipuri -->
+        <div class="menu-card" data-id="cheese-panipuri">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=400" alt="Cheese Panipuri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 4.8
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Cheese Panipuri</h3>
+            <p class="menu-card-desc">A fusion delight! Crispy puris loaded with spiced potatoes, tangy chutneys, and a generous layer of melted cheese.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹149</span>
+              <button class="add-to-cart-btn add-btn" data-id="cheese-panipuri" aria-label="Add Cheese Panipuri to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sweet & Spicy Panipuri -->
+        <div class="menu-card" data-id="sweet-spicy-panipuri">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&q=80&w=400" alt="Sweet & Spicy Panipuri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 4.6
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Sweet & Spicy Panipuri</h3>
+            <p class="menu-card-desc">Perfect harmony of hot mint-chili water and rich sweet dates-tamarind chutney.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹109</span>
+              <button class="add-to-cart-btn add-btn" data-id="sweet-spicy-panipuri" aria-label="Add Sweet & Spicy Panipuri to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dahi Puri -->
+        <div class="menu-card" data-id="dahi-puri">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=400" alt="Dahi Puri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 4.9
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Dahi Puri</h3>
+            <p class="menu-card-desc">Crispy hollow puris filled with potatoes, topped with whipped sweet yogurt, dynamic chutneys, sev, and pomegranate.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹139</span>
+              <button class="add-to-cart-btn add-btn" data-id="dahi-puri" aria-label="Add Dahi Puri to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sev Puri -->
+        <div class="menu-card" data-id="sev-puri">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&q=80&w=400" alt="Sev Puri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 4.8
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Sev Puri</h3>
+            <p class="menu-card-desc">Flat crispy puris loaded with diced potatoes, onions, tomatoes, trio of house chutneys, and a mountain of fine sev.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹129</span>
+              <button class="add-to-cart-btn add-btn" data-id="sev-puri" aria-label="Add Sev Puri to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paradise Combo -->
+        <div class="menu-card" data-id="paradise-combo">
+          <div class="menu-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=400" alt="Special Paradise Combo" class="menu-card-img" loading="lazy">
+            <span class="menu-card-rating">
+              <i data-lucide="star" style="width:12px; height:12px; fill:currentColor;"></i> 5.0
+            </span>
+          </div>
+          <div class="menu-card-content">
+            <h3 class="menu-card-title">Special Paradise Combo</h3>
+            <p class="menu-card-desc">Platter of 12 puris with 4 unique flavored waters (Mint, Garlic, Hing, Lemon-Ginger) plus a side of Dahi Puri.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">₹249</span>
+              <button class="add-to-cart-btn add-btn" data-id="paradise-combo" aria-label="Add Special Paradise Combo to cart">
+                <i data-lucide="plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- LIVE ORDERS DASHBOARD --- -->
+  <section id="live-tracker" class="live-orders section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Live Orders Dashboard</h2>
+        <p>Track your delicious cravings real-time. Watch your order go from preparing to served!</p>
+      </div>
+
+      <!-- Live Order Statistics -->
+      <div class="live-stats">
+        <div class="stat-card">
+          <div class="stat-val" id="stat-active">0</div>
+          <div class="stat-label">Active Orders</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="stat-preparing" style="color: var(--primary-color);">0</div>
+          <div class="stat-label">In Preparation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="stat-ready" style="color: var(--accent-blue);">0</div>
+          <div class="stat-label">Ready to Serve</div>
+        </div>
+      </div>
+
+      <!-- Live Tracked Orders list -->
+      <div class="live-orders-grid" id="live-orders-container">
+        <!-- If empty -->
+        <div class="cart-empty-state" style="padding: 40px; background-color: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <i data-lucide="activity" style="width:48px; height:48px; color: var(--text-muted);"></i>
+          <p style="font-weight:600;">No live orders right now.</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Add items to your cart, place an order, and watch it show up here!</p>
+        </div>
+      </div>
+
+      <!-- Live Status Feed -->
+      <div class="live-order-feed">
+        <div class="feed-header">
+          <i data-lucide="bell-ring" style="width:18px; height:18px; color: var(--primary-color);"></i>
+          Live Updates Feed
+        </div>
+        <ul class="feed-list" id="feed-list">
+          <li class="feed-item" style="color: var(--text-muted);">
+            <span>System initialized in simulated live database mode.</span>
+            <span class="time">Just Now</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CUSTOMER REVIEWS --- -->
+  <section id="reviews" class="reviews section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Our Paradise Foodies Say</h2>
+        <p>Hear from real customers who fell in love with our crispy bites and rich spice blends.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review submission form -->
+        <div class="reviews-form-card">
+          <h3>Leave a Review</h3>
+          <form id="review-form">
+            <div class="form-group">
+              <label>Your Rating</label>
+              <div class="star-rating-select" id="star-rating-select">
+                <span data-star="1"><i data-lucide="star"></i></span>
+                <span data-star="2"><i data-lucide="star"></i></span>
+                <span data-star="3"><i data-lucide="star"></i></span>
+                <span data-star="4"><i data-lucide="star"></i></span>
+                <span data-star="5" class="active"><i data-lucide="star"></i></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="review-name">Name</label>
+              <input type="text" id="review-name" required placeholder="E.g., Neha Gupta">
+            </div>
+            <div class="form-group">
+              <label for="review-comment">Your Thoughts</label>
+              <textarea id="review-comment" rows="4" required placeholder="What did you love about our street-food?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Review</button>
+          </form>
+        </div>
+
+        <!-- Slider list of reviews -->
+        <div class="reviews-slider-container">
+          <div class="reviews-list" id="reviews-list">
+            <!-- Rendered Dynamically in app.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- GALLERY SECTION --- -->
+  <section id="gallery" class="gallery section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Food Gallery</h2>
+        <p>A sneak peek at our fresh prep, hygienic food carts, and colorful client smiles.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-img-url="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=800">
+          <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=300" alt="Crispy Panipuri Detail">
+        </div>
+        <div class="gallery-item" data-img-url="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=800">
+          <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&q=80&w=300" alt="Making panipuri waters">
+        </div>
+        <div class="gallery-item" data-img-url="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=800">
+          <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=300" alt="Chilled Dahi Puri">
+        </div>
+        <div class="gallery-item" data-img-url="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&q=80&w=800">
+          <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&q=80&w=300" alt="Fresh Sev Puri">
+        </div>
+        <div class="gallery-item" data-img-url="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=800">
+          <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=300" alt="Platters of combos">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- CONTACT SECTION --- -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Visit The Paradise</h2>
+        <p>Drop by our hygienic street side shop, call us for catering, or write to us directly.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon-box"><i data-lucide="map-pin"></i></div>
+            <div class="contact-details">
+              <h4>Our Location</h4>
+              <p>Stall #12, Food Street, Sector 62, Noida, UP - 201301</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-box"><i data-lucide="phone"></i></div>
+            <div class="contact-details">
+              <h4>Call Us</h4>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-box"><i data-lucide="mail"></i></div>
+            <div class="contact-details">
+              <h4>Email Us</h4>
+              <p>hello@panipuriparadise.com</p>
+            </div>
+          </div>
+
+          <!-- Mock Map -->
+          <div class="map-container">
+            <div class="mock-map">
+              <i data-lucide="map-pin" class="mock-map-pin"></i>
+              <h5>Pani Puri Paradise</h5>
+              <p>Food Street, Sector 62, Noida</p>
+              <span style="font-size:0.75rem; color: var(--text-muted); margin-top:5px;">Interactive Mock Map</span>
+              
+              <div class="map-zoom-controls">
+                <button class="map-zoom-btn" title="Zoom In">+</button>
+                <button class="map-zoom-btn" title="Zoom Out">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reviews-form-card">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" required placeholder="E.g., Arjun Verma">
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" required placeholder="E.g., arjun@example.com">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" rows="5" required placeholder="Tell us how we can help you or enquire about catering orders..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" style="width: 100%;">Send Message <i data-lucide="send"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- ADMIN DASHBOARD SECTION --- -->
+  <section id="admin" class="admin-section section-padding">
+    <div class="container">
+      <div class="admin-header">
+        <div>
+          <h2>Admin Dashboard</h2>
+          <p id="admin-db-indicator">Database Connection: <span class="mode-badge" id="admin-db-status">Simulated Local Mode</span></p>
+        </div>
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="admin-orders">Orders Manager</button>
+          <button class="admin-tab-btn" data-tab="admin-inventory">Inventory Manager</button>
+          <button class="admin-tab-btn" data-tab="admin-analytics">Sales Analytics</button>
+          <button class="admin-tab-btn" data-tab="admin-settings">Firebase Config</button>
+        </div>
+      </div>
+
+      <!-- TAB 1: Orders Management -->
+      <div class="admin-panel-content active" id="admin-orders">
+        <div class="admin-orders-list" id="admin-orders-list">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- TAB 2: Inventory Management -->
+      <div class="admin-panel-content" id="admin-inventory">
+        <div class="inventory-list" id="admin-inventory-list">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- TAB 3: Analytics -->
+      <div class="admin-panel-content" id="admin-analytics">
+        <div class="analytics-grid">
+          <div class="analytics-card">
+            <h4>Total Revenue</h4>
+            <div class="analytics-main-value" id="analytic-revenue">₹0</div>
+          </div>
+          <div class="analytics-card">
+            <h4>Completed Orders</h4>
+            <div class="analytics-main-value" id="analytic-orders">0</div>
+          </div>
+          <div class="analytics-card">
+            <h4>Avg. Order Value</h4>
+            <div class="analytics-main-value" id="analytic-avg-value">₹0</div>
+          </div>
+        </div>
+
+        <div class="analytics-card" style="margin-top: 30px;">
+          <h4>Popularity Ranking</h4>
+          <div class="popular-items-list" id="analytic-popular-items">
+            <!-- Dynamically Rendered -->
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: Settings -->
+      <div class="admin-panel-content" id="admin-settings">
+        <div class="firebase-settings-panel">
+          <h4><i data-lucide="database"></i> Firebase Realtime Database Integration</h4>
+          <p style="font-size:0.85rem; color: var(--text-secondary); margin-bottom: 20px;">
+            Input your Firebase configuration details to connect this dashboard to a live Realtime Database. Leaving these empty defaults back to Simulated LocalStorage mode.
+          </p>
+          <form id="firebase-config-form">
+            <div class="form-group">
+              <label for="fb-apikey">API Key</label>
+              <input type="password" id="fb-apikey" placeholder="AIzaSy...">
+            </div>
+            <div class="form-group">
+              <label for="fb-authdomain">Auth Domain</label>
+              <input type="text" id="fb-authdomain" placeholder="project-id.firebaseapp.com">
+            </div>
+            <div class="form-group">
+              <label for="fb-dburl">Database URL</label>
+              <input type="text" id="fb-dburl" placeholder="https://project-id-default-rtdb.firebaseio.com">
+            </div>
+            <div class="form-group">
+              <label for="fb-projectid">Project ID</label>
+              <input type="text" id="fb-projectid" placeholder="project-id">
+            </div>
+            <div class="form-group" style="display:flex; gap:10px; margin-top:20px;">
+              <button type="submit" class="btn btn-primary" style="flex:1;">Save Configuration</button>
+              <button type="button" class="btn btn-secondary" id="fb-clear-config">Clear & Reset to Local Mock</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- FOOTER --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Pani Puri Paradise</h3>
+          <p>Serving the crunchiest, tangiest, and cleanest street food experience since 2026. Hand-rolled, custom spiced, daily fresh.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Story</a></li>
+            <li><a href="#menu">Store Menu</a></li>
+            <li><a href="#live-tracker">Order Status</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Timings</h4>
+          <ul class="footer-links" style="font-size:0.88rem;">
+            <li>Monday - Friday: 3:00 PM - 10:00 PM</li>
+            <li>Saturday - Sunday: 1:00 PM - 11:00 PM</li>
+            <li>Catering enquiries available 24/7.</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact Support</a></li>
+            <li><a href="#reviews">Submit Feedback</a></li>
+            <li><a href="#admin" class="admin-link-btn">Management Portal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pani Puri Paradise. Built with ❤️ for street food lovers. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- SHOPPING CART SIDEBAR DRAWER --- -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3><i data-lucide="shopping-basket"></i> Your Cart</h3>
+      <button class="close-cart-btn" id="close-cart" aria-label="Close Cart">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    
+    <div class="cart-items" id="cart-items-container">
+      <!-- Items will render dynamically -->
+    </div>
+
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>GST & Handling (5%)</span>
+        <span id="cart-tax">₹0</span>
+      </div>
+      <div class="summary-row total">
+        <span>Grand Total</span>
+        <span id="cart-total">₹0</span>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="checkout-btn">Proceed to Checkout <i data-lucide="credit-card"></i></button>
+    </div>
+  </div>
+
+  <!-- --- CHECKOUT MODAL --- -->
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-content">
+      <div class="checkout-modal-header">
+        <h3>Order Confirmation</h3>
+        <button class="close-checkout-btn" id="close-checkout" aria-label="Close Checkout">&times;</button>
+      </div>
+      <form class="checkout-form" id="checkout-form">
+        <div class="order-type-tabs">
+          <button type="button" class="order-type-btn active" data-type="dinein">Dine-in (Table)</button>
+          <button type="button" class="order-type-btn" data-type="delivery">Delivery</button>
+        </div>
+
+        <div class="form-group">
+          <label for="cust-name">Your Name</label>
+          <input type="text" id="cust-name" required placeholder="E.g., Rohan Gupta">
+        </div>
+        <div class="form-group">
+          <label for="cust-phone">Phone Number</label>
+          <input type="tel" id="cust-phone" required pattern="[0-9]{10}" placeholder="E.g., 9876543210 (10 digits)">
+        </div>
+
+        <!-- Dine In field -->
+        <div class="form-group" id="dinein-group">
+          <label for="cust-table">Table Number</label>
+          <input type="number" id="cust-table" placeholder="E.g., 4" min="1" max="20">
+        </div>
+
+        <!-- Delivery field (hidden by default) -->
+        <div class="form-group" id="delivery-group" style="display: none;">
+          <label for="cust-address">Delivery Address</label>
+          <textarea id="cust-address" rows="3" placeholder="Enter full address..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Place Order (Pay on Delivery) <i data-lucide="chevron-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- --- LIGHTBOX FOR GALLERY --- -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-lightbox" id="close-lightbox" aria-label="Close Image lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Zoomed view">
+    </div>
+  </div>
+
+  <!-- --- Firebase SDK compat libraries --- -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+  
+  <!-- --- Database Layer Wrapper --- -->
+  <script src="firebase-db.js"></script>
+
+  <!-- --- Main UI JavaScript --- -->
+  <script src="app.js"></script>
+
+</body>
+</html>
